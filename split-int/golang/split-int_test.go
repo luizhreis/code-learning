@@ -13,6 +13,7 @@ func TestSplitInt(t *testing.T) {
 	testCases = append(testCases, testCase{10932, []int{1, 0, 9, 3, 2}})
 	testCases = append(testCases, testCase{567, []int{5, 6, 7}})
 	testCases = append(testCases, testCase{0, []int{}})
+	testCases = append(testCases, testCase{30, []int{3, 0}})
 
 	for _, testCase := range testCases {
 		if got := splitInt(testCase.n); !slicesEqual(got, testCase.want) {
